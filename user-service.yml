@@ -1,26 +1,12 @@
 spring:
   datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    uri: jdbc:mysql://localhost:3306/argiro
+    driver-class-name: com.mysql.jdbc.Driver
     username: root
+    url: jdbc:mysql://localhost:3306/argiro
     password: root
   jpa:
-    hibernate.ddl-auto: update
-    generate-ddl: true
-    show-sql: true
-  jpa:
-    openInView: false
-    show_sql: true
-    generate-ddl: true
     hibernate:
-      ddl-auto: create-drop
-    properties:
-      hibernate.jdbc.lob.non_contextual_creation: true
-    properties.hibernate.dialect: org.hibernate.dialect.MySQLDialect
-  data:
-    jpa:
-      repositories.enabled: true
-
+      ddl-auto: update
 eureka:
   client:
     service-url:
