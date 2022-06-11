@@ -8,3 +8,10 @@ management:
   endpoints:
     routes:
       enabled: true
+    #Actuator contains the health indicators used by Eureka Server to determine
+    # the health of the service.
+    # (By default, Eureka server set the URL to the /info of the service to check the health)
+    web:
+      exposure:
+        include: *
+
